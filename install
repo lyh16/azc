@@ -1,5 +1,5 @@
 #!/bin/sh
-curl "https://raw.githubusercontent.com/lyh16/zoombie/main/azc" -s --output azc
+curl "https://raw.githubusercontent.com/lyh16/azc/main/azc" -s --output azc
 touch zoom-meetings.txt
 echo "Success."
 echo ""
