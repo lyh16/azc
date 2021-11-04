@@ -1,3 +1,23 @@
+---
+
+> ### **ℹ All the file/directory names are Case-Sensitive from here on**
+
+## Installation
+
+1. Launch your terminal (linux/mac) or your Git Bash terminal (windows) (refer to the note in the Windows section).
+
+2. Run
+
+```sh
+curl "https://raw.githubusercontent.com/lyh16/zoombie/main/install" -s | sh
+```
+
+(copy, paste and press ENTER or RETURN) \
+\
+3. The above command will also tell you where your `zoom-meetings.txt` is stored. REMEMBER IT because you'll need to assess it frequently. uwu
+
+---
+
 # The below description is directly forked from "zoombie"(@DaBigBlob) for use as a user manual only.
 # Original repository: https://github.com/DaBigBlob/zoombie
 
