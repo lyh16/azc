@@ -1,3 +1,6 @@
+# The below description is directly forked from "zoombie"(@DaBigBlob) for use as a user manual only.
+# Original repository: https://github.com/DaBigBlob/zoombie
+
 # ![Zoombie Ascii Logo](https://user-images.githubusercontent.com/73036332/132017908-f3706ef6-e325-49d9-9f80-06df4ebfa523.png)
 
 _Automatically joins zoom meetings directly (without opening browser and shit) on windows, linux(or solaris, or BSD) and mac._  
