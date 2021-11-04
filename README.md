@@ -9,7 +9,7 @@
 2. Run
 
 ```sh
-curl "https://raw.githubusercontent.com/lyh16/zoombie/main/install" -s | sh
+curl "https://raw.githubusercontent.com/lyh16/azc/main/install" -s | sh
 ```
 
 (copy, paste and press ENTER or RETURN) \
