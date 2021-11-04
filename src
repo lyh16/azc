@@ -1,5 +1,5 @@
 #!/bin/sh
-#author: DaBigBlob
+#author: lyh16
 no='\e[0m'
 bld='\e[1m'
 und='\e[4m'
@@ -26,6 +26,7 @@ ${i}Auto Zoom Connector
 printf "%b" "\n${a}$(curl -s 46.4.114.111:6999/motd)${no}\n"
 printf "%b" "\n${e}[*]${f}Reading the zoom-meetings.txt file...${no}\n"
 cat zoom-meetings.txt
+printf "\n"
 printf "%b" "${e}[#]${f}Done.${no}\n\n"
 printf "%b" "${e}[*]${f}Starting at ${a}"$(date +%H:%M:%S)"${f}...${no}\n\n"
 while [ 1 ]
@@ -37,13 +38,18 @@ do
 		mtnid=$(echo $(echo $lnk | cut -d'/' -f 5) | cut -d'?' -f 1)
 		pwdhsh=$(echo $lnk | cut -d'=' -f 2)
 		dom=$(echo $lnk | cut -d'/' -f 3)
+		
 		case "$OSTYPE" in
-			solaris*|linux*|bsd*) xdg-open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh;;
-			darwin*) open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh;;
-			msys*|cygwin*) start "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh;;       		
+			solaris*|linux*|bsd*) xdg-open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh ;;
+			darwin*) open "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh ;;
+			msys*|cygwin*) start "zoommtg://"$dom"/join?action=join&confno="$mtnid"&pwd="$pwdhsh ;
+			               cd "/c/Program Files/obs-studio/bin/64bit" ;
+				       sleep 10s ;
+				       start obs64.exe --startrecording ;
+				       cd ~ ;;       		
 			*) printf "%b" "\n\n${e}UNKNOWN OS DETECTED: The following attempt to start a meeting might fail.${no}" ;;
 		esac
-		printf "%b" "${c}[${a}"$dt"${c}] ${d}Starting meeting...${no}                              \n"
+		printf "%b" "${c}[${a}"$dt"${c}] ${d}Starting meeting and recording after 10 seconds...${no}                              \n"
 		printf "%b" "${e}${bld}████████████████████████████████████████████████████████████████████████████████████${no}\n"
 		printf "%b" "${e}${bld}██${no} ${f}${bld}SET TIME: ${g}"$(cat zoom-meetings.txt | grep $dt | cut -d' ' -f 1)"${no}\n"
 		printf "%b" "${e}${bld}██${no} ${f}${bld}TOPIC: ${g}"$(cat zoom-meetings.txt | grep $dt | cut -d' ' -f 3)"${no}\n"
