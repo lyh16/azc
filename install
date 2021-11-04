@@ -1,7 +1,7 @@
 #!/bin/sh
-curl "https://raw.githubusercontent.com/DaBigBlob/zoombie/main/zoombie" -s --output zoombie
+curl "https://raw.githubusercontent.com/lyh16/zoombie/main/azc" -s --output azc
 touch zoom-meetings.txt
 echo "Success."
 echo ""
-echo "NOTE: zoombie and your zoom-meetings.txt file are in: "$PWD
+echo "NOTE: azc and your zoom-meetings.txt file are in: "$PWD
 echo "------for God's sake remember this location"
